@@ -1,0 +1,6 @@
+# Ignorar arquivos de logs e relatórios gerados pelo Robot
+logs/
+output.xml
+report.html
+log.html
+*.png

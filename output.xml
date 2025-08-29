@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.3 on win32)" generated="2025-06-11T11:01:45.979676" rpa="false" schemaversion="5">
+<suite id="s1" name="Franqueado" source="C:\Projeto_robot\automacao_Web_a-ai\test_case\franqueado.robot">
+<test id="s1-t1" name="Cenário 1: Acessar menu empresas" line="10">
+<kw name="efetuar login autenticator" owner="setup_teardown" type="SETUP">
+<kw name="abrir site" owner="setup_teardown">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-06-11T11:01:46.191975" level="INFO">Opening browser 'chrome' to base url 'https://hml.franqueadosthebest.com'.</msg>
+<arg>https://hml.franqueadosthebest.com</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-06-11T11:01:46.191777" elapsed="3.528246"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-06-11T11:01:49.720395" elapsed="0.051135"/>
+</kw>
+<status status="PASS" start="2025-06-11T11:01:46.191197" elapsed="3.580516"/>
+</kw>
+<kw name="estou na pagina da autenticator" owner="login">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CAMPO_USUARIO}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-11T11:01:49.772333" elapsed="0.033184"/>
+</kw>
+<status status="PASS" start="2025-06-11T11:01:49.771970" elapsed="0.033652"/>
+</kw>
+<kw name="digito o login do usuario" owner="login">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CAMPO_USUARIO}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-11T11:01:49.806023" elapsed="0.025059"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-11T11:01:49.831939" level="INFO">Clicking element 'id=email'.</msg>
+<arg>${CAMPO_USUARIO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-11T11:01:49.831488" elapsed="0.104193"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-11T11:01:49.936675" level="INFO">Typing text 'nereunogueira@ogrupothebest.com' into text field 'id=email'.</msg>
+<arg>${CAMPO_USUARIO}</arg>
+<arg>${USUARIO.EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-11T11:01:49.935859" elapsed="0.214186"/>
+</kw>
+<status status="PASS" start="2025-06-11T11:01:49.805795" elapsed="0.344351"/>
+</kw>
+<kw name="clico no botao continuar" owner="login">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BTN_CONTINUAR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-11T11:01:50.150527" elapsed="0.016018"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-11T11:01:50.166907" level="INFO">Clicking element '//*[@id="root"]/div/div[1]/div[1]/form/button/span'.</msg>
+<arg>${BTN_CONTINUAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-11T11:01:50.166714" elapsed="0.064598"/>
+</kw>
+<status status="PASS" start="2025-06-11T11:01:50.150296" elapsed="0.081112"/>
+</kw>
+<kw name="digito a senha" owner="login">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CAMPO_PASSWORD}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-11T11:01:50.231782" elapsed="0.673615"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-11T11:01:50.905961" level="INFO">Clicking element 'id=password'.</msg>
+<arg>${CAMPO_PASSWORD}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-11T11:01:50.905663" elapsed="0.057620"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-11T11:01:50.963706" level="INFO">Typing text 'Davi01032018@' into text field 'id=password'.</msg>
+<arg>${CAMPO_PASSWORD}</arg>
+<arg>${USUARIO}[PASSWORD]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-11T11:01:50.963464" elapsed="0.102853"/>
+</kw>
+<status status="PASS" start="2025-06-11T11:01:50.231558" elapsed="0.834922"/>
+</kw>
+<kw name="clico no botao conectar" owner="login">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CONECTAR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-11T11:01:51.067126" elapsed="0.023523"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-11T11:01:51.091374" level="INFO">Clicking element '//*[@id="root"]/div/div/div[1]/form/button/span'.</msg>
+<arg>${CONECTAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-11T11:01:51.091038" elapsed="0.055698"/>
+</kw>
+<status status="PASS" start="2025-06-11T11:01:51.066738" elapsed="0.080092"/>
+</kw>
+<kw name="vejo a pagina inicial" owner="login">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${PAGINA_INICIAL}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-11T11:01:51.147180" elapsed="1.534977"/>
+</kw>
+<status status="PASS" start="2025-06-11T11:01:51.146973" elapsed="1.535295"/>
+</kw>
+<status status="PASS" start="2025-06-11T11:01:46.190819" elapsed="6.491499"/>
+</kw>
+<kw name="Dado que acesso o portal do franqueado" owner="gherkin" source_name="Dado que ${keyword}">
+<kw name="Run Keyword" owner="BuiltIn">
+<kw name="acesso o portal do franqueado" owner="franqueado">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BTN_PORTAL}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-11T11:01:52.683997" elapsed="0.017026"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-11T11:01:52.701448" level="INFO">Clicking element '//div[3]//button[1]'.</msg>
+<arg>${BTN_PORTAL}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-11T11:01:52.701226" elapsed="0.085573"/>
+</kw>
+<status status="PASS" start="2025-06-11T11:01:52.683704" elapsed="0.103438"/>
+</kw>
+<arg>${keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="PASS" start="2025-06-11T11:01:52.683189" elapsed="0.104129"/>
+</kw>
+<status status="PASS" start="2025-06-11T11:01:52.682838" elapsed="0.104577"/>
+</kw>
+<kw name="E clico no menu materiais" owner="gherkin" source_name="E ${keyword}">
+<kw name="Run Keyword" owner="BuiltIn">
+<kw name="clico no menu materiais" owner="franqueado">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-11T11:01:52.792297" level="INFO">Clicking button '//div[contains(text(),'Materiais')]'.</msg>
+<msg time="2025-06-11T11:01:53.618694" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-17.png"&gt;&lt;img src="selenium-screenshot-17.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-06-11T11:01:53.618995" level="FAIL">Button with locator '//div[contains(text(),'Materiais')]' not found.</msg>
+<arg>${BTN_MATERIAIS}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="FAIL" start="2025-06-11T11:01:52.792045" elapsed="0.830465">Button with locator '//div[contains(text(),'Materiais')]' not found.</status>
+</kw>
+<status status="FAIL" start="2025-06-11T11:01:52.789801" elapsed="0.832914">Button with locator '//div[contains(text(),'Materiais')]' not found.</status>
+</kw>
+<arg>${keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="FAIL" start="2025-06-11T11:01:52.789158" elapsed="0.833612">Button with locator '//div[contains(text(),'Materiais')]' not found.</status>
+</kw>
+<status status="FAIL" start="2025-06-11T11:01:52.788118" elapsed="0.834747">Button with locator '//div[contains(text(),'Materiais')]' not found.</status>
+</kw>
+<kw name="Então sou redirecionado para a página do portal do franqueado" owner="gherkin" source_name="Então ${keyword}">
+<status status="NOT RUN" start="2025-06-11T11:01:53.623718" elapsed="0.000075"/>
+</kw>
+<kw name="fechar navegador" owner="setup_teardown" type="TEARDOWN">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-11T11:01:58.625292" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-11T11:01:53.624556" elapsed="5.001056"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2025-06-11T11:01:58.626167" elapsed="6.406455"/>
+</kw>
+<status status="PASS" start="2025-06-11T11:01:53.624249" elapsed="11.408522"/>
+</kw>
+<doc>Acessar portal do franqueado</doc>
+<tag>franqueado</tag>
+<status status="FAIL" start="2025-06-11T11:01:46.189901" elapsed="18.843178">Button with locator '//div[contains(text(),'Materiais')]' not found.</status>
+</test>
+<status status="FAIL" start="2025-06-11T11:01:45.980974" elapsed="19.052957"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">franqueado</stat>
+</tag>
+<suite>
+<stat name="Franqueado" id="s1" pass="0" fail="1" skip="0">Franqueado</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
